@@ -29,7 +29,8 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 mainClassName = 'io.vertx.core.Launcher' //<--add
-def mainVerticleName = 'com.joe.smart.HelloWorldVerticle'//<--add
+//def mainVerticleName = 'com.joe.smart.HelloWorldVerticle'//<--add
+def mainVerticleName = 'com.joe.smart.Server                                                                                                                            '//<--add
 def watchForChange = 'src/**/*'
 def doOnChange = './gradlew classes'
 
@@ -40,6 +41,7 @@ repositories {
 
 dependencies {
     compile "io.vertx:vertx-core:$vertx_version"
+    compile "io.vertx:vertx-web:$vertx_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile "org.assertj:assertj-core:3.6.2"
     testCompile "io.vertx:vertx-unit:$vertx_version"
