@@ -13,6 +13,7 @@ public class HelloWorldVerticle extends AbstractVerticle {
 
         }).listen(8080, result->{
             if (result.succeeded()) {
+                System.out.println("hello world");
                 startFuture.complete();
             } else {
                 startFuture.fail(result.cause());
